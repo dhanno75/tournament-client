@@ -49,8 +49,7 @@ const CreateTournament = () => {
         setTimeout(
           () =>
             window.location.replace(
-              // "https://tournament-dhananjay.netlify.app/"
-              "http://localhost:3000/"
+              "https://tournament-dhananjay.netlify.app/"
             ),
           2000
         );
