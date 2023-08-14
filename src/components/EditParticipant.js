@@ -35,7 +35,11 @@ const EditParticipant = () => {
     localStorage.removeItem("location");
     localStorage.removeItem("level");
 
-    setTimeout(() => window.location.replace("http://localhost:3000/"), 3000);
+    setTimeout(
+      () =>
+        window.location.replace("https://tournament-dhananjay.netlify.app/"),
+      2000
+    );
   };
 
   return (

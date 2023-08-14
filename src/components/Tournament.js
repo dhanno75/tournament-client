@@ -22,7 +22,11 @@ const Tournament = () => {
         "Content-Type": "application/json",
       },
     });
-    setTimeout(() => window.location.replace("http://localhost:3000/"), 2000);
+    setTimeout(
+      () =>
+        window.location.replace("https://tournament-dhananjay.netlify.app/"),
+      2000
+    );
   };
 
   const setTData = (tournament) => {

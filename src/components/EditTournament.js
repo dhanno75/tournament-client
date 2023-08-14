@@ -66,7 +66,11 @@ const EditTournament = () => {
     localStorage.removeItem("participantsId");
     localStorage.removeItem("tournamentID");
 
-    setTimeout(() => window.location.replace("http://localhost:3000/"), 3000);
+    setTimeout(
+      () =>
+        window.location.replace("https://tournament-dhananjay.netlify.app/"),
+      2000
+    );
   };
 
   return (

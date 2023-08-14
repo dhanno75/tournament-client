@@ -46,7 +46,10 @@ const CreateTournament = () => {
         };
         dispatch(createTournament(values));
         setTimeout(
-          () => window.location.replace("http://localhost:3000/"),
+          () =>
+            window.location.replace(
+              "https://tournament-dhananjay.netlify.app/"
+            ),
           2000
         );
       },
