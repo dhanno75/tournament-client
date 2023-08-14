@@ -15,6 +15,7 @@ import {
 import BeatLoader from "react-spinners/BeatLoader";
 import { Link } from "react-router-dom";
 import { API } from "../globals";
+import intro from "../images/intro.png";
 
 const Dashboard = () => {
   const dispatch = useDispatch();
@@ -29,6 +30,7 @@ const Dashboard = () => {
     dispatch(getAllParticipants());
   }, [dispatch]);
 
+  // Function to delete participant
   const handleDelete = async (participantId) => {
     await fetch(`${API}/participants/${participantId}`, {
       method: "DELETE",
@@ -40,6 +42,7 @@ const Dashboard = () => {
     dispatch(getAllParticipants());
   };
 
+  // storing the participants data in localstorage
   const setParticipantData = (participant) => {
     console.log(participant);
     localStorage.setItem("participantName", participant.name);
@@ -52,6 +55,15 @@ const Dashboard = () => {
     <Container fluid>
       <div className="dashboard_container">
         <Carousel>
+          <Carousel.Item style={{ height: "60%" }}>
+            <img
+              className="d-block w-100"
+              src={intro}
+              alt="First slide"
+              style={{ width: "100%", objectFit: "cover" }}
+              height={700}
+            />
+          </Carousel.Item>
           {tournaments.length !== 0 ? (
             tournaments.map((tournament) => (
               <Carousel.Item style={{ height: "60%" }} key={tournament._id}>
@@ -59,11 +71,16 @@ const Dashboard = () => {
                   className="d-block w-100"
                   src={tournament.banner}
                   alt="First slide"
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  style={{ width: "100%", objectFit: "cover" }}
+                  height={600}
                 />
                 <Carousel.Caption>
-                  <h5>{tournament.tournamentName}</h5>
-                  <p>{`Tournament starts on: ${new Date(tournament.startDate)
+                  <h5 style={{ fontSize: "40px" }}>
+                    {tournament.tournamentName}
+                  </h5>
+                  <p
+                    style={{ fontSize: "22px" }}
+                  >{`Tournament starts on: ${new Date(tournament.startDate)
                     .toUTCString()
                     .split(" ")
                     .slice(0, 4)
@@ -72,7 +89,9 @@ const Dashboard = () => {
                     .split(" ")
                     .slice(0, 4)
                     .join(" ")}`}</p>
-                  <h4>Status: {tournament.currentStatus}</h4>
+                  <h4 style={{ fontSize: "25px" }}>
+                    Status: {tournament.currentStatus}
+                  </h4>
                 </Carousel.Caption>
               </Carousel.Item>
             ))
@@ -89,7 +108,9 @@ const Dashboard = () => {
           )}
         </Carousel>
         <div style={{ display: "block", width: "100%", padding: 30 }}>
-          <h4>React-Bootstrap Tab Component</h4>
+          <h4 style={{ marginBottom: "30px" }}>
+            Tournament & Participant details
+          </h4>
           <Tabs defaultActiveKey="first" fill>
             <Tab
               eventKey="first"

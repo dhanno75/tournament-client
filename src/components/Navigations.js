@@ -11,6 +11,7 @@ function Navigation() {
       bg="primary"
       data-bs-theme="dark"
       style={{ height: "80px", padding: "0 30px" }}
+      sticky="top"
     >
       <Container fluid>
         <Link to="/" className="links main-link">
@@ -18,7 +19,10 @@ function Navigation() {
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="justify-content-end align-item-end">
+          <Nav
+            style={{ marginTop: "3px", width: "100%" }}
+            className="justify-content-end"
+          >
             <Link to="/addTournament" className="links">
               Add tournament
             </Link>

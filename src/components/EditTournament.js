@@ -43,6 +43,7 @@ const EditTournament = () => {
     }
   };
 
+  // Function to submit the edit form of tournament and clearing the localstorage
   const handleSubmit = (e) => {
     e.preventDefault();
     let formDetails = {

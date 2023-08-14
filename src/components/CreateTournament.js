@@ -15,6 +15,7 @@ const CreateTournament = () => {
     dispatch(getAllParticipants());
   }, [dispatch]);
 
+  // Function to check if the checked input is true and storing the values of checked input in a state array variable
   const handleCheckChange = (e) => {
     const { value, checked } = e.target;
 
@@ -48,7 +49,8 @@ const CreateTournament = () => {
         setTimeout(
           () =>
             window.location.replace(
-              "https://tournament-dhananjay.netlify.app/"
+              // "https://tournament-dhananjay.netlify.app/"
+              "http://localhost:3000/"
             ),
           2000
         );

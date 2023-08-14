@@ -19,6 +19,7 @@ const EditParticipant = () => {
     setLevel(localStorage.getItem("level"));
   }, []);
 
+  // Function to submit the edit form of participant and clearing the localstorage
   const handleSubmit = (e) => {
     e.preventDefault();
     const formDetails = {

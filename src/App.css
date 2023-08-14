@@ -1,14 +1,13 @@
 .links {
   text-decoration: none;
   color: azure;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 500;
   margin-right: 15px;
-  margin-top: 3px;
 }
 
 .main-link {
-  font-size: 22px;
+  font-size: 25px;
 }
 
 #tournament-form-container {
@@ -49,8 +48,9 @@
 /* Tournament */
 
 .tournament-banner {
-  width: 60%;
-  height: 300px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .banner-img {
@@ -60,22 +60,29 @@
 }
 
 .about {
-  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 .about h1 {
   font-weight: 300;
+  margin: 5px 0;
   text-decoration: underline;
 }
 
 .about p {
   word-spacing: 1.5px;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
+}
+
+.tour-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 @media screen and (max-width: 750px) {
