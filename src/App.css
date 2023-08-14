@@ -64,6 +64,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 25px;
   height: 100%;
 }
 
@@ -83,6 +84,17 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+.participant-list ul {
+  list-style-type: none;
+}
+
+.participant-list li {
+  padding-bottom: 4px;
+  border-bottom: 1px dotted gray;
+  padding-left: 5px;
+  width: 100%;
 }
 
 @media screen and (max-width: 750px) {

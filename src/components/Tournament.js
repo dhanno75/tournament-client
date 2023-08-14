@@ -50,7 +50,7 @@ const Tournament = () => {
 
   return (
     <Container fluid style={{ padding: "30px" }}>
-      <Row style={{ borderRadius: "10px" }}>
+      <Row style={{ borderRadius: "10px", height: "600px" }}>
         {tournaments
           ? tournaments.map((tournament) => (
               <div key={tournament._id} className="tournament-banner">
@@ -106,7 +106,9 @@ const Tournament = () => {
                       </div>
                     </div>
                     <div className="participant-list">
-                      <p style={{ marginRight: "5px" }}>Participants:</p>
+                      <p style={{ marginBottom: "-0.5px" }}>
+                        Participants list:
+                      </p>
                       <ul>
                         {tournament.result
                           ? tournament.result.map((participant) => (
