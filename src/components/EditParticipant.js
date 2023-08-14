@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useDispatch } from "react-redux";
-import {
-  createParticipant,
-  editParticipant,
-} from "../redux/features/ParticipantSlicer";
+import { editParticipant } from "../redux/features/ParticipantSlicer";
 import { useParams } from "react-router-dom";
 
 const EditParticipant = () => {
